@@ -71,16 +71,9 @@
       },
       "saveButton": {
         "label": "TRANSLATE.SAVE",
-        "data": ["volume_step", "reverse_rotation", "single_press", "double_press", "long_press", "manual_haptic"]
+        "data": ["reverse_rotation", "single_press", "double_press", "long_press", "manual_haptic"]
       },
       "content": [
-        {
-          "id": "volume_step",
-          "element": "input",
-          "type": "number",
-          "label": "TRANSLATE.VOLUME_STEP",
-          "value": 2
-        },
         {
           "id": "reverse_rotation",
           "element": "switch",
