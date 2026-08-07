@@ -7,6 +7,11 @@
 - Add programmable detent / automatic haptic support if reliable.
 - Consider seek or secondary control modes.
 
+## [0.1.1] - 2026-08-07
+### Fixed
+- Return `kew` promises from Volumio lifecycle methods so Volumio 4 recognises plugin start and stop correctly.
+- Declare `kew` explicitly as a runtime dependency.
+
 ## [0.1.0] - 2026-08-07
 ### Added
 - Initial experimental `system_hardware` plugin.
