@@ -7,5 +7,5 @@
   "double_press_ms": {"type": "number", "value": 420},
   "long_press_ms": {"type": "number", "value": 700},
   "reconnect_seconds": {"type": "number", "value": 5},
-  "manual_haptic": {"type": "boolean", "value": false}
+  "haptics": {"type": "boolean", "value": true}
 }
