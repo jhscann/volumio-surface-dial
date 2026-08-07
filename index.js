@@ -1,5 +1,7 @@
 'use strict';
-const libQ=require('kew'); const ConfigStore=require('./lib/config-store'); const {execFile}=require('child_process'); const {SurfaceDial}=require('./lib/surface-dial'); const bluetooth=require('./lib/bluetooth');
+let libQ;
+try { libQ = require('/volumio/node_modules/kew'); } catch (e) { libQ = require('kew'); }
+const ConfigStore=require('./lib/config-store'); const {execFile}=require('child_process'); const {SurfaceDial}=require('./lib/surface-dial'); const bluetooth=require('./lib/bluetooth');
 module.exports=ControllerSurfaceDial;
 function ControllerSurfaceDial(context){this.context=context;this.commandRouter=context.coreCommand;this.logger=context.logger;this.configManager=context.configManager;this.config=new ConfigStore();this.dial=null;this.buttonDownAt=0;this.clickTimer=null;this.pendingClicks=0;this.longPressFired=false;}
 ControllerSurfaceDial.prototype.onVolumioStart=function(){const configFile=this.commandRouter.pluginManager.getConfigurationFile(this.context,'config.json');this.config.loadFile(configFile);return libQ.resolve();};
