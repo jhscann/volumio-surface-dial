@@ -1,0 +1,21 @@
+{
+  "page": {"label": "TRANSLATE.SURFACE_DIAL", "icon": "fa-circle-o"},
+  "sections": [
+    {"id":"status","element":"section","label":"TRANSLATE.STATUS","icon":"fa-info-circle","onSave":"saveSettings","saveButton":{"label":"TRANSLATE.SAVE"},"content":[
+      {"id":"device_mac","element":"input","type":"text","label":"TRANSLATE.DEVICE_MAC","doc":"TRANSLATE.DEVICE_MAC_DOC","value":""},
+      {"id":"scan","element":"button","label":"TRANSLATE.SCAN","onClick":"scanForDial","class":"btn btn-info"},
+      {"id":"pair","element":"button","label":"TRANSLATE.PAIR","onClick":"pairDial","class":"btn btn-success"},
+      {"id":"forget","element":"button","label":"TRANSLATE.FORGET","onClick":"forgetDial","class":"btn btn-warning"}]},
+    {"id":"controls","element":"section","label":"TRANSLATE.CONTROLS","icon":"fa-sliders","onSave":"saveSettings","saveButton":{"label":"TRANSLATE.SAVE"},"content":[
+      {"id":"volume_step","element":"input","type":"number","label":"TRANSLATE.VOLUME_STEP","value":2},
+      {"id":"reverse_rotation","element":"switch","label":"TRANSLATE.REVERSE_ROTATION","value":false},
+      {"id":"single_press","element":"select","label":"TRANSLATE.SINGLE_PRESS","value":{"value":"toggle","label":"Play / Pause"},"options":[{"value":"toggle","label":"Play / Pause"},{"value":"next","label":"Next track"},{"value":"previous","label":"Previous track"},{"value":"none","label":"Do nothing"}]},
+      {"id":"double_press","element":"select","label":"TRANSLATE.DOUBLE_PRESS","value":{"value":"next","label":"Next track"},"options":[{"value":"toggle","label":"Play / Pause"},{"value":"next","label":"Next track"},{"value":"previous","label":"Previous track"},{"value":"none","label":"Do nothing"}]},
+      {"id":"long_press","element":"select","label":"TRANSLATE.LONG_PRESS","value":{"value":"previous","label":"Previous track"},"options":[{"value":"toggle","label":"Play / Pause"},{"value":"next","label":"Next track"},{"value":"previous","label":"Previous track"},{"value":"none","label":"Do nothing"}]},
+      {"id":"manual_haptic","element":"switch","label":"TRANSLATE.MANUAL_HAPTIC","doc":"TRANSLATE.MANUAL_HAPTIC_DOC","value":false}]},
+    {"id":"advanced","element":"section","label":"TRANSLATE.ADVANCED","icon":"fa-cog","onSave":"saveSettings","saveButton":{"label":"TRANSLATE.SAVE"},"content":[
+      {"id":"double_press_ms","element":"input","type":"number","label":"TRANSLATE.DOUBLE_PRESS_MS","value":420},
+      {"id":"long_press_ms","element":"input","type":"number","label":"TRANSLATE.LONG_PRESS_MS","value":700},
+      {"id":"reconnect_seconds","element":"input","type":"number","label":"TRANSLATE.RECONNECT_SECONDS","value":5}]}
+  ]
+}
