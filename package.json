@@ -1,9 +1,11 @@
 {
   "name": "surface_dial",
-  "version": "0.1.1",
-  "description": "Use a Microsoft Surface Dial as a tactile controller for Volumio.",
+  "version": "0.2.0",
+  "description": "Use a Microsoft Surface Dial as a tactile Bluetooth controller for Volumio.",
   "main": "index.js",
-  "scripts": {"test": "node test/test.js"},
+  "scripts": {
+    "test": "node test/test.js"
+  },
   "author": "John Cann",
   "license": "MIT",
   "repository": "https://github.com/jhscann/volumio-surface-dial",
@@ -14,10 +16,13 @@
     "architectures": ["arm", "armv7", "armv8", "x86_amd64"],
     "os": ["buster", "bookworm"],
     "has_alsa_contribution": false,
-    "details": "Control Volumio playback and volume with a Microsoft Surface Dial over Bluetooth HID.",
-    "changelog": "Fix Volumio 4 lifecycle promise compatibility."
+    "details": "Control Volumio playback and volume with a Microsoft Surface Dial over Bluetooth HID, including 50-step haptic volume control and automatic reconnect.",
+    "changelog": "Adds hardware-validated 50-detent haptics, fixed 2% volume steps, unified haptics control, automatic Bluetooth reconnect, Volumio 4 UI fixes and submission-ready installer safeguards."
   },
-  "engines": {"node": ">=14", "volumio": ">=3"},
+  "engines": {
+    "node": ">=14",
+    "volumio": ">=4"
+  },
   "dependencies": {
     "kew": "^0.7.0"
   }
