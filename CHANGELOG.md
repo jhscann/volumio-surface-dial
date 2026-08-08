@@ -1,34 +1,35 @@
 # Changelog
 
-## [Unreleased]
+## [0.2.0] - 2026-08-08
 ### Added
 - Hardware-validated programmable Surface Dial haptics using Linux HID feature reports.
 - Fixed 50-detent rotary mapping: one complete revolution represents the full 0–100% Volumio volume range, with 2% per detent.
-- Bundled `scripts/set-dial-feature.py`; the installer now verifies it is present, makes it executable, and ensures Python 3 is available.
-- Bluetooth trust/connect support for automatic reconnection after the Dial sleeps.
+- Unified **Haptics** setting controlling rotational and button-action feedback, enabled by default.
+- Bundled `scripts/set-dial-feature.py`; the installer verifies it is present, makes it executable and ensures Python 3 is available.
+- Bluetooth trust/connect support for automatic reconnection after the Dial sleeps or loses its link.
+- Submission-oriented installation and hardware validation checklist.
 
 ### Fixed
 - Volumio 4 settings UI controller endpoint schema.
 - Rapid rotation volume handling now accumulates target volume rather than racing asynchronous volume reads.
 - Automatic reconnect now asks BlueZ to reconnect when the paired Dial has dropped its Bluetooth connection.
-
-### Planned
-- Continue real-device validation of sleep/wake behaviour across Volumio hardware platforms.
-- Consider seek or secondary control modes.
+- Removed obsolete configurable volume-step and experimental haptic settings/documentation.
+- Installer now refuses to overwrite an unrelated pre-existing udev rules file.
+- Uninstaller removes only a udev rules file explicitly marked as owned by this plugin.
+- Installer no longer changes the system's boot-time Bluetooth enable/disable policy.
 
 ## [0.1.1] - 2026-08-07
 ### Fixed
-- Return `kew` promises from Volumio lifecycle methods so Volumio 4 recognises plugin start and stop correctly.
+- Return `kew` promises from Volumio lifecycle methods so Volumio recognises plugin start and stop correctly.
 - Declare `kew` explicitly as a runtime dependency.
 
 ## [0.1.0] - 2026-08-07
 ### Added
-- Initial experimental `system_hardware` plugin.
+- Initial `system_hardware` plugin.
 - Direct `hidraw` Surface Dial report parsing.
 - Bluetooth scan, pair and forget actions through BlueZ.
 - Volume control from rotation.
 - Configurable single, double and long press actions.
 - Automatic HID reconnect loop.
-- Experimental manual confirmation haptic.
 - Volumio install/uninstall scripts and scoped udev permissions.
 - Unit tests and hardware validation checklist.
