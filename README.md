@@ -144,6 +144,7 @@ Before Plugin Store submission/promotion, complete `docs/TESTING.md`, including 
 ## Known limitations
 
 - Wider testing across Volumio hardware platforms and Bluetooth adapters is still desirable.
+- **Wireless Output Manager compatibility:** Surface Dial sleep/reconnect activity may interrupt Bluetooth audio when Surface Dial and Wireless Output Manager share the same Bluetooth adapter. If playback stutters, disable the Surface Dial plugin. Separating the Dial and speaker onto different adapters prevented the interruption in one Raspberry Pi/Volumio 4 test, but Wireless Output Manager may need explicit adapter selection to reconnect its speaker after reboot.
 - Bluetooth discovery output can vary between BlueZ releases.
 - Battery level is not exposed.
 - Rotation controls volume only; there is currently no secondary seek/navigation mode.

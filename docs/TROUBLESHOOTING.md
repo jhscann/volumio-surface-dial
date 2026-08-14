@@ -1,5 +1,9 @@
 # Troubleshooting
 
+## Bluetooth audio stutters with Wireless Output Manager
+
+Surface Dial sleep and reconnect activity may conflict with Bluetooth audio when Surface Dial and Wireless Output Manager use the same Bluetooth adapter. Disable the Surface Dial plugin if playback begins stuttering. Separating the Dial and speaker onto different Bluetooth adapters prevented the interruption in one Raspberry Pi/Volumio 4 test. Wireless Output Manager may still need explicit adapter selection to reconnect its speaker after reboot when the other adapter becomes BlueZ's default.
+
 ## Dial is not found
 Confirm Bluetooth is active and the Dial is in pairing mode:
 ```sh
