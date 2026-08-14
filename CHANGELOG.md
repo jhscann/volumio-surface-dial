@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.1] - 2026-08-14
+### Fixed
+- Validate the complete nine-byte Surface Dial input report before generating rotation or button events, ignoring unrelated report types.
+- Ignore unmatched or duplicate button state reports so one physical press produces at most one configured action.
+- Clear pending button gestures when the HID reader disconnects, preventing a stale release from issuing a playback command after reconnect.
+
 ## [0.2.0] - 2026-08-08
 ### Added
 - Hardware-validated programmable Surface Dial haptics using Linux HID feature reports.
